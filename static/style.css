@@ -1,0 +1,31 @@
+#screenContainer {
+    display: inline-block;
+}
+#touchPad {
+    position: absolute;
+}
+#buttons button {
+    width: 32%;
+}
+#buttons {
+    padding: 0px;
+    margin: 0px;
+}
+#log {
+    position: absolute;
+    top: 10px;
+    width: 30%;
+    height: 50%;
+    float: right;
+    border: 1px solid #999;
+    margin-left: 100px;
+    overflow-y: scroll;
+}
+#log p{
+    padding: 0px;
+    margin: 0px;
+    font-size: 80%;
+}
+#log p.success{
+    color: green;
+}

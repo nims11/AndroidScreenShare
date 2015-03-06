@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Screen Share</title>
+        <script src="/static/jquery.js" type="text/javascript" charset="utf-8"></script>
+        <link rel="stylesheet" href="/static/style.css" type="text/css" media="all" />
+    </head>
+    <body>
+        <table>
+        <tr>
+            <td>
+                <div id="screenContainer">
+                    <div id="touchPad" style=""></div>
+                    <img width=320 height=480 id="screen" src="/static/screen.png" />
+                </div>
+                <div id="buttons">
+                    <button class="special_button" data-key=3>Home</button>
+                    <button class="special_button" data-key=82>Menu</button>
+                    <button class="special_button" data-key=4>Back</button>
+                    <button class="special_button" data-key=24>Volume Up</button>
+                    <button class="special_button" data-key=25>Volume Down</button>
+                    <button class="special_button" data-key=26>Power</button>
+                    <button class="special_button" data-key=27>Camera</button>
+                    <button class="special_button" data-key=84>Search</button>
+                </div>
+                <label for="longpress">Longpress?</label><input type="checkbox" id="longpress" />
+            </td>
+            <td>
+                <input type="text" id="wordToSend" value="" />
+                <button id="send-text">Send Text</button><br />
+                <button class="special_button" data-key=62>Space</button>
+                <button class="special_button" data-key=66>Enter</button>
+                <button class="special_button" data-key=67>Delete</button>
+            </td>
+            <td>
+                <div id="log">
+                </div>
+            </td>
+        </tr>
+        </table>
+        <script type=text/javascript src="/static/main.js"></script>
+    </body>
+</html>
