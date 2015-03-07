@@ -14,10 +14,12 @@ window.setInterval(function (){
 function logEvent(text){
     var lid = globalCnt++;
     $logDiv.append('<p>'+'['+lid+'] '+text+'</p>');
+    $logDiv.scrollTop($logDiv[0].scrollHeight);
     return lid;
 }
 function ackEvent(lid){
     $logDiv.append('<p class="success">'+'['+lid+'] Success!</p>');
+    $logDiv.scrollTop($logDiv[0].scrollHeight);
 }
 function sendClick(x, y){
     var lid = logEvent('Tap at position: ('+x+','+y+')');
@@ -41,14 +43,22 @@ function sendSwipe(x1, y1, x2, y2){
         },
     });
 }
-
+function getCoordinates(e){
+    var x = e.offsetX, y = e.offsetY;
+    if(x == undefined)
+        x = e.pageX-$touchPad.offset().left,
+        y = e.pageY-$touchPad.offset().top;
+    return {'x': x, 'y': y};
+}
 $touchPad.on('mousedown', function(e){
-    swipeStart = {'x': e.offsetX, 'y': e.offsetY};
+    var xy = getCoordinates(e);
+    swipeStart = xy;
 });
 $touchPad.on('mouseup', function(e){
     if(swipeStart != null){
         var x1 = swipeStart['x'], y1 = swipeStart['y'];
-        var x2 = e.offsetX, y2 = e.offsetY;
+        var xy2 = getCoordinates(e);
+        var x2 = xy2['x'], y2 = xy2['y'];
         var diffX = (x1-x2)*(x1-x2), diffY = (y1-y2)*(y1-y2);
         if(diffX + diffY < 25){
             sendClick(x1, y1);
