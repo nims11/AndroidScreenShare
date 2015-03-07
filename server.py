@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import web, subprocess
 adbPath = '/opt/android-sdk/platform-tools/adb'
+subprocess.Popen(['sudo', 'bash', './genscreenshot.sh'])
 urls = (
         '/', 'index',
         '/click', 'click',
