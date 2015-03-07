@@ -1,5 +1,6 @@
 #Android Screen Share
 
+- It is a dirty one day hack, so all the best.
 - Works with linux
 - Access and Control your android through browser (Chrome/Firefox)
 - Support for Tap, Swipe, Text input, special buttons
@@ -21,3 +22,4 @@ $ cd AndroidScreenShare
 $ sudo python2 server.py
 ```
 Open localhost:8080 on your browser
+To stop the server through Ctrl+C, you might have to first close the app instance on the browser.
