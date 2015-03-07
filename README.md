@@ -16,7 +16,8 @@
 ##Usage
 
 ```bash
-$ 
-$ 
-$
+$ git clone 'https://github.com/nims11/AndroidScreenShare.git'
+$ cd AndroidScreenShare
+$ sudo python2 server.py
 ```
+Open localhost:8080 on your browser
