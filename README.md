@@ -21,5 +21,5 @@ $ git clone 'https://github.com/nims11/AndroidScreenShare.git'
 $ cd AndroidScreenShare
 $ sudo python2 server.py
 ```
-Open localhost:8080 on your browser
+Open localhost:8080 on your browser (Works best with Chrome)
 To stop the server through Ctrl+C, you might have to first close the app instance on the browser.

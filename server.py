@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import web, subprocess
 adbPath = '/opt/android-sdk/platform-tools/adb'
-subprocess.Popen(['sudo', 'bash', './genscreenshot.sh'])
+p = subprocess.Popen(['sudo', 'bash', './genscreenshot.sh'])
 urls = (
         '/', 'index',
         '/click', 'click',
@@ -47,3 +47,4 @@ class sendText:
 if __name__ == '__main__':
     app = web.application(urls, globals())
     app.run()
+p.kill()
